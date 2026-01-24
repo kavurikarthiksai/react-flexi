@@ -1,0 +1,189 @@
+.blogPostList {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media screen and (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .blogPostList {
+    padding: 20px 16px;
+  }
+}
+
+.postLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.postLink:hover,
+.postLink:focus {
+  transform: translateY(-4px);
+}
+
+.emptyState {
+  text-align: center;
+  padding: 40px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.emptyState p {
+  color: #666;
+  font-size: 18px;
+  margin: 0;
+}
+
+.postContainer {
+  position: relative;
+  transition: transform 0.2s ease;
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.postContainer:hover {
+  transform: translateY(-4px);
+}
+
+.postActions {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.postContainer:hover .postActions {
+  opacity: 1;
+}
+
+.editButton,
+.deleteButton {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border: none;
+  text-decoration: none;
+}
+
+.editButton {
+  background-color: #007bff;
+  color: white;
+}
+
+.deleteButton {
+  background-color: #dc3545;
+  color: white;
+}
+
+.editButton:hover {
+  background-color: #0056b3;
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+  .editButton {
+    background-color: #66b3ff;
+  }
+
+  .editButton:hover {
+    background-color: #99ccff;
+  }
+
+  .deleteButton {
+    background-color: #ff6b6b;
+  }
+
+  .deleteButton:hover {
+    background-color: #ff8585;
+  }
+}
+
+/* Tablet View */
+@media screen and (max-width: 1199px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+  .blogPostList {
+    padding: 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .postActions {
+    opacity: 1;
+    position: static;
+    margin-top: 1rem;
+    justify-content: flex-end;
+  }
+
+  .postContainer:hover {
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grid > *:nth-child(1) { animation-delay: 0.1s; }
+.grid > *:nth-child(2) { animation-delay: 0.2s; }
+.grid > *:nth-child(3) { animation-delay: 0.3s; }
+.grid > *:nth-child(4) { animation-delay: 0.4s; }
+.grid > *:nth-child(5) { animation-delay: 0.5s; }
+.grid > *:nth-child(6) { animation-delay: 0.6s; }
+
+.emptyState {
+  background: var(--card-background);
+  padding: 3rem 2rem;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.emptyState p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin: 0;
+}

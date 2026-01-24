@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+.blogPostDetail {
+  background: var(--card-background);
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: clamp(2rem, 5vw, 4rem);
+  box-shadow: var(--shadow-lg);
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.blogPostDetail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), #8b5cf6);
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+.meta {
+  margin-bottom: 30px;
+}
+
+.author {
+  font-size: 18px;
+  color: #666666;
+  margin: 0 0 10px 0;
+}
+
+.authorName {
+  font-weight: 500;
+}
+
+.date {
+  display: block;
+  font-size: 16px;
+  color: #999999;
+  margin: 0;
+}
+
+.content {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.content p {
+  margin-bottom: 1.5em;
+}
+
+.content a {
+  color: #007BFF;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.content a:hover,
+.content a:focus {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.notFound {
+  text-align: center;
+  padding: 40px;
+  color: #666666;
+}
+
+.notFound h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #333333;
+}
+
+/* Actions and Edit Button styles */
+.actions {
+  margin-top: 2rem;
+  text-align: right;
+  border-top: 1px solid #dddddd;
+  padding-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.editButton,
+.deleteButton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.editButton {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+}
+
+.deleteButton {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+.editButton:hover,
+.editButton:focus {
+  background-color: #0056b3;
+  color: white;
+}
+
+.deleteButton:hover,
+.deleteButton:focus {
+  background-color: #c82333;
+  color: white;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: #666666;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+}
+
+.backButton:hover {
+  color: #333333;
+  background-color: #f0f0f0;
+  transform: translateX(-4px);
+}
+
+/* Comments Section */
+.commentsSection {
+  margin-top: 2.5rem;
+  padding: 1.5rem 0 0 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .commentsSection {
+    padding: 1rem 0 0 0;
+  }
+}
+
+/* Tablet View */
+@media screen and (max-width: 1199px) {
+  .blogPostDetail {
+    padding: 32px;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .content {
+    font-size: 16px;
+  }
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+  .blogPostDetail {
+    padding: 20px;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .author {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .date {
+    font-size: 12px;
+  }
+
+  .content {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .meta {
+    margin-bottom: 20px;
+  }
+
+  .backButton {
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* High contrast mode and dark theme support */
+@media (prefers-color-scheme: dark) {
+  .blogPostDetail {
+    background: #1a1a1a;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .title {
+    color: #ffffff;
+  }
+
+  .author {
+    color: #cccccc;
+  }
+
+  .date {
+    color: #999999;
+  }
+
+  .content {
+    color: #ffffff;
+  }
+
+  .content a {
+    color: #66b3ff;
+  }
+
+  .content a:hover,
+  .content a:focus {
+    color: #99ccff;
+  }
+
+  .actions {
+    border-top-color: #444444;
+  }
+
+  .editButton {
+    background-color: #66b3ff;
+  }
+
+  .editButton:hover,
+  .editButton:focus {
+    background-color: #99ccff;
+  }
+
+  .deleteButton {
+    background-color: #ff6b6b;
+  }
+
+  .deleteButton:hover,
+  .deleteButton:focus {
+    background-color: #ff8585;
+  }
+
+  .backButton {
+    color: #cccccc;
+  }
+
+  .backButton:hover {
+    color: #ffffff;
+    background-color: #2a2a2a;
+  }
+}

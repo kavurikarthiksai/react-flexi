@@ -1,0 +1,77 @@
+.appContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background: var(--card-background);
+  border-radius: 0 0 1.5rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  border-top: none;
+}
+
+.navLink,
+.navLinkCreate {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.navLink {
+  color: #333333;
+}
+
+.navLinkCreate {
+  background-color: #007bff;
+  color: white;
+}
+
+.navLink:hover {
+  color: #007bff;
+}
+
+.navLinkCreate:hover {
+  background-color: #0056b3;
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+  .nav {
+    border-bottom-color: #444444;
+  }
+
+  .navLink {
+    color: #ffffff;
+  }
+
+  .navLink:hover {
+    color: #66b3ff;
+  }
+
+  .navLinkCreate {
+    background-color: #66b3ff;
+  }
+
+  .navLinkCreate:hover {
+    background-color: #99ccff;
+  }
+}
