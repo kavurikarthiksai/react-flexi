@@ -101,18 +101,66 @@ Run ESLint to check code quality:
 npm run lint
 ```
 
-### State Management
-The app uses React hooks (useState, useEffect, useMemo) for state management. Local state is used for blog posts and comments.
+## 🧩 Development Challenges
 
-### Routing
-React Router enables navigation between:
-- Home page (blog post list)
-- Post detail page (`/posts/:id`)
-- Create post page (`/create`)
-- Edit post page (`/posts/:id/edit`)
+This project was developed through a series of structured challenges, each focusing on a core concept of modern React application development.
 
-### Styling
-CSS Modules provide scoped styling to prevent naming conflicts and ensure component encapsulation.
+---
+
+## 🚀 Challenge 1 – Project Setup & Core React Basics
+- Initialized the project using **Vite + React** for fast builds and hot module reloading.
+- Organized the initial folder structure for scalability and maintainability.
+- Applied fundamental React concepts such as **JSX**, **components**, and **props**.
+- Established a solid foundation for all future features.
+
+---
+
+## 📖 Challenge 2 – Blog Post Viewing
+- Implemented the `BlogPostDetail` component to display complete blog post content.
+- Rendered post title, author name, publication date, and formatted content.
+- Handled missing or invalid post data gracefully.
+- Ensured responsive layouts for mobile, tablet, and desktop screens.
+
+---
+
+## ✍️ Challenge 3 – Blog Post Creation & Editing
+- Built a reusable `BlogPostForm` component for creating and editing posts.
+- Added validation for required fields such as title, content, and author.
+- Prefilled form fields when editing an existing post.
+- Designed responsive layouts with single-column mobile views and multi-column desktop layouts.
+
+---
+
+## 🗑️ Challenge 4 – Blog Post Deletion
+- Implemented secure blog post deletion functionality.
+- Displayed a confirmation dialog to prevent accidental deletions.
+- Added keyboard navigation and accessibility-friendly focus handling.
+- Ensured the confirmation dialog adapts to all screen sizes.
+
+---
+
+## 🧭 Challenge 5 – Responsive Navigation & Layout
+- Created a responsive navigation bar with branding and navigation links.
+- Implemented a hamburger menu for smaller screens.
+- Introduced a reusable layout structure with header, main content, and footer.
+- Focused on smooth transitions, accessibility, and responsive design.
+
+---
+
+## 💬 Challenge 6 – Comment System
+- Built a complete comment system for individual blog posts.
+- Displayed commenter name, timestamp, comment text, and optional avatars.
+- Enabled dynamic comment submission without page reloads.
+- Ensured accessible form controls and responsive comment layouts.
+
+---
+
+## 🔍 Challenge 7 – Search Functionality
+- Implemented a search feature to filter blog posts by title, content, or author.
+- Supported case-insensitive and real-time search results.
+- Highlighted matching keywords within search results.
+- Delivered a responsive and accessible search experience.
+
 
 ## Future Enhancements
 
